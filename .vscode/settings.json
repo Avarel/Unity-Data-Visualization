@@ -1,6 +1,7 @@
 ﻿{
     "files.exclude":
     {
+        "**/.history":true,
         "**/.DS_Store":true,
         "**/.git":true,
         "**/.gitmodules":true,
