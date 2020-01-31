@@ -5,37 +5,37 @@ using System;
 
 public class DataPlotter : MonoBehaviour
 {
-
-    // Name of the input file, no extension
-    public string inputfile;
-
-    // List for holding data from CSV reader
+    // Data from CSV reader.
     private List<Dictionary<string, object>> pointList;
 
-    // Scale of the plot
+    // Scale of the plot.
     public float plotScale = 10;
 
-    // Indices for columns to be assigned
+    // Indices for columns to be assigned.
     public int columnX = 0;
     public int columnY = 1;
     public int columnZ = 2;
 
-    // Full column names
+    // Column names.
     public string xName;
     public string yName;
     public string zName;
 
-    // The prefab for the data points that will be instantiated
+    // The prefab cloned to graph data points.
     public GameObject PointPrefab;
 
-    // The holder of our points
+    // The parent of all points (so that we don't dump all points into the hierarchy).
     public GameObject PointHolder;
 
-    // Use this for initialization
-    void Start()
+    public void PlotDataFromString(string data)
     {
-        // Set pointlist to results of function Reader with argument inputfile
-        pointList = CSVReader.ReadFile(inputfile);
+        // Delete all children of the current point holder.
+        foreach (Transform child in PointHolder.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        pointList = CSVReader.Read(data);
 
         //Log to console
         Debug.Log(pointList);
@@ -79,7 +79,6 @@ public class DataPlotter : MonoBehaviour
             dataPoint.GetComponent<Renderer>().material.color = new Color(x, y, z, 1.0f);
             dataPoint.transform.parent = PointHolder.transform;
         }
-
     }
 
     private float FindMaxValue(string columnName)

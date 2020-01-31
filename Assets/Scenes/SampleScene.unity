@@ -121,6 +121,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &236093219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 958233083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &236093220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236093219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d045eef49d8354f5aa2c863d83f945a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socket: {fileID: 658386571}
 --- !u!1 &658386569
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e4deb442465466fad0ed5786f2371b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plotter: {fileID: 778207675}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.35003328, y: -0.2165212, z: 0.26244134, w: 0.8727657}
-  m_LocalPosition: {x: 0.35, y: 2.94, z: -0.61}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -285,7 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7f75a26ee644309acc347c354b87fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputfile: iris
   plotScale: 10
   columnX: 1
   columnY: 2

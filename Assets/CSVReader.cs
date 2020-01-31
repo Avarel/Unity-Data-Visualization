@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
+// Taken from https://bravenewmethod.com/2014/09/13/lightweight-csv-reader-for-unity/
 public class CSVReader
 {
     private static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
