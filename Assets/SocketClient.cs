@@ -68,5 +68,4 @@ public class SocketClient : MonoBehaviour
     {
         await websocket.Close();
     }
-
 }
